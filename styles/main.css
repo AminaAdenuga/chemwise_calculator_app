@@ -1,0 +1,303 @@
+
+/* ==========================================
+   CHEMWISE — GLOBAL VISUAL SYSTEM
+========================================== */
+
+.stApp,
+[data-testid="stAppViewContainer"] {
+    background: var(--cw-background) !important;
+    color: var(--cw-text) !important;
+    transition: background 0.25s ease, color 0.25s ease;
+}
+
+[data-testid="stHeader"] {
+    background: transparent !important;
+}
+
+[data-testid="stSidebar"] {
+    background: var(--cw-surface) !important;
+    border-right: 1px solid var(--cw-border);
+}
+
+[data-testid="stSidebar"] > div {
+    background: var(--cw-surface);
+}
+
+
+/* ==========================================
+   TYPOGRAPHY
+========================================== */
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--cw-text) !important;
+    letter-spacing: -0.025em;
+}
+
+p, li, label, .stMarkdown {
+    color: var(--cw-text);
+}
+
+small,
+.stCaption,
+[data-testid="stCaptionContainer"] {
+    color: var(--cw-muted) !important;
+}
+
+
+/* ==========================================
+   DASHBOARD CARDS
+========================================== */
+
+.cw-card {
+    background: var(--cw-card-bg) !important;
+    border: 1px solid var(--cw-card-border) !important;
+    border-radius: 15px;
+    padding: 1.25rem;
+    box-shadow: var(--cw-card-shadow);
+    min-height: 145px;
+    height: 100%;
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.cw-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--cw-primary) !important;
+}
+
+.cw-card h3 {
+    color: var(--cw-text) !important;
+    font-size: 1.05rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.cw-card p {
+    color: var(--cw-muted) !important;
+    font-size: 0.9rem;
+}
+
+
+/* ==========================================
+   RESULT CARDS
+========================================== */
+
+.cw-result {
+    background: var(--cw-result-bg) !important;
+    border: 1px solid var(--cw-border);
+    border-radius: 13px;
+    padding: 1.15rem;
+    margin: 0.5rem 0;
+    box-shadow: var(--cw-card-shadow);
+}
+
+.cw-result-label {
+    color: var(--cw-muted) !important;
+    font-size: 0.82rem;
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+}
+
+.cw-result-value {
+    color: var(--cw-text) !important;
+    font-size: 1.55rem;
+    font-weight: 750;
+    overflow-wrap: anywhere;
+}
+
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.stButton > button,
+.stFormSubmitButton > button,
+[data-testid="stFormSubmitButton"] button {
+    background: var(--cw-button-bg) !important;
+    color: var(--cw-button-text) !important;
+    border: 1px solid var(--cw-button-bg) !important;
+    border-radius: 10px !important;
+    padding: 0.6rem 1rem !important;
+    font-weight: 650 !important;
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.stButton > button:hover,
+.stFormSubmitButton > button:hover,
+[data-testid="stFormSubmitButton"] button:hover {
+    background: var(--cw-button-hover) !important;
+    border-color: var(--cw-button-hover) !important;
+    color: var(--cw-button-text) !important;
+    box-shadow: 0 4px 14px rgba(118, 82, 181, 0.18);
+    transform: translateY(-1px);
+}
+
+.stButton > button:focus,
+.stFormSubmitButton > button:focus {
+    box-shadow: 0 0 0 2px var(--cw-focus) !important;
+}
+
+
+/* ==========================================
+   TEXT INPUTS AND NUMBER INPUTS
+========================================== */
+
+[data-testid="stTextInput"] input,
+[data-testid="stNumberInput"] input,
+[data-testid="stTextArea"] textarea {
+    background: var(--cw-input-background) !important;
+    color: var(--cw-text) !important;
+    border: 1px solid var(--cw-border) !important;
+    border-radius: 9px !important;
+}
+
+[data-testid="stTextInput"] input::placeholder,
+[data-testid="stNumberInput"] input::placeholder {
+    color: var(--cw-muted) !important;
+    opacity: 0.8;
+}
+
+[data-testid="stTextInput"] input:focus,
+[data-testid="stNumberInput"] input:focus,
+[data-testid="stTextArea"] textarea:focus {
+    border-color: var(--cw-focus) !important;
+    box-shadow: 0 0 0 1px var(--cw-focus) !important;
+}
+
+
+/* ==========================================
+   SELECT BOXES AND DROPDOWNS
+========================================== */
+
+[data-baseweb="select"] > div {
+    background: var(--cw-input-background) !important;
+    color: var(--cw-text) !important;
+    border-color: var(--cw-border) !important;
+}
+
+[data-baseweb="popover"],
+[data-baseweb="menu"] {
+    background: var(--cw-surface) !important;
+    color: var(--cw-text) !important;
+}
+
+[data-baseweb="menu"] li {
+    color: var(--cw-text) !important;
+}
+
+
+/* ==========================================
+   RADIO BUTTONS AND CHECKBOXES
+========================================== */
+
+[data-testid="stRadio"],
+[data-testid="stCheckbox"],
+[data-testid="stToggle"] {
+    color: var(--cw-text);
+}
+
+[data-testid="stRadio"] label,
+[data-testid="stCheckbox"] label,
+[data-testid="stToggle"] label {
+    color: var(--cw-text) !important;
+}
+
+
+/* ==========================================
+   TABLES
+========================================== */
+
+.cw-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--cw-surface) !important;
+    color: var(--cw-text) !important;
+    border: 1px solid var(--cw-border);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.cw-table th {
+    background: var(--cw-surface-alt) !important;
+    color: var(--cw-text) !important;
+    font-weight: 700;
+}
+
+.cw-table td {
+    background: var(--cw-surface) !important;
+    color: var(--cw-text) !important;
+}
+
+.cw-table th,
+.cw-table td {
+    padding: 0.85rem;
+    text-align: left;
+    border-bottom: 1px solid var(--cw-border);
+}
+
+.cw-table tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* ==========================================
+   ALERTS
+========================================== */
+
+[data-testid="stAlert"] {
+    border-radius: 11px;
+}
+
+
+/* ==========================================
+   DIVIDERS
+========================================== */
+
+hr {
+    border-color: var(--cw-border) !important;
+}
+
+
+/* ==========================================
+   SIDEBAR
+========================================== */
+
+[data-testid="stSidebar"] [data-testid="stMarkdownContainer"] p {
+    color: var(--cw-text);
+}
+
+
+/* ==========================================
+   PAGE LAYOUT
+========================================== */
+
+.block-container {
+    max-width: 1200px;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width: 768px) {
+    .block-container {
+        padding: 1rem;
+    }
+
+    .cw-card {
+        min-height: auto;
+        margin-bottom: 0.5rem;
+    }
+
+    .cw-result-value {
+        font-size: 1.25rem;
+    }
+}
